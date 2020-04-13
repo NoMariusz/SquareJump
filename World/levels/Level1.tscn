@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://World/GroundTiteMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Elements/EndPortal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Elements/JumpStream.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Elements/Checkpoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=5]
+
+[node name="Map" type="Node2D"]
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 64, 144 )
+
+[node name="EndPortal" parent="." instance=ExtResource( 2 )]
+position = Vector2( -400, -672 )
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 320, 144 )
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 1528, 144 )
+
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 1504, -368 )
+
+[node name="Checkpoint4" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 488, -360 )
+
+[node name="Dangers" type="Node2D" parent="."]
+
+[node name="Jumpers" type="Node2D" parent="."]
+
+[node name="Jumper" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 120, -336 )
+
+[node name="Jumper5" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 120, -368 )
+
+[node name="Jumper6" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 184, -368 )
+
+[node name="Jumper2" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 184, -336 )
+
+[node name="Jumper3" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 248, -336 )
+
+[node name="Jumper4" parent="Jumpers" instance=ExtResource( 3 )]
+position = Vector2( 248, -368 )
+
+[node name="Texts" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Texts"]
+margin_top = 80.0
+margin_right = 178.0
+margin_bottom = 110.0
+text = "Hi, Wecome in Square Jump. You can jump by clickin your mouse"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Texts"]
+margin_left = -16.0
+margin_top = 8.0
+margin_right = 162.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 5 )
+text = "Level 1"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Texts"]
+margin_left = 224.0
+margin_top = 40.0
+margin_right = 416.0
+margin_bottom = 88.0
+text = "This place is your checkpoint. If flame is green, you comebac there on your death"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Texts"]
+margin_left = 560.0
+margin_top = 96.0
+margin_right = 738.0
+margin_bottom = 144.0
+text = "If you longer hold mouse button, you will jump farther"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Texts"]
+margin_left = 1696.0
+margin_top = 88.0
+margin_right = 1874.0
+margin_bottom = 136.0
+text = "If you hold right mouse button, you can stick to wall"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Texts"]
+margin_left = 1744.0
+margin_top = -88.0
+margin_right = 1922.0
+margin_bottom = -6.0
+text = "You can jump after sticking. To do this you must let RMB (lrightmouse button) and after this let LMB (left mouse button)"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -589832, 13, 0, -589831, 10, 0, -589830, 10, 0, -589829, 10, 0, -589828, 10, 0, -589827, 10, 0, -589826, 10, 0, -589825, 10, 0, -655360, 14, 0, -327679, 13, 0, -327678, 10, 0, -327677, 10, 0, -327676, 10, 0, -327675, 10, 0, -327674, 10, 0, -327673, 10, 0, -327672, 10, 0, -327671, 14, 0, -327668, 13, 0, -327667, 10, 0, -327666, 10, 0, -327665, 10, 0, -327664, 14, 0, -327660, 13, 0, -327659, 10, 0, -327658, 10, 0, -327657, 10, 0, -327656, 14, 0, -262114, 5, 0, -196582, 13, 0, -196581, 14, 0, -196578, 6, 0, -131042, 6, 0, -65506, 6, 0, 26, 13, 0, 27, 14, 0, 30, 6, 0, 65566, 6, 0, 131102, 6, 0, 196608, 13, 0, 196609, 10, 0, 196610, 10, 0, 196611, 10, 0, 196612, 10, 0, 196613, 10, 0, 196614, 10, 0, 196615, 10, 0, 196616, 10, 0, 196617, 10, 0, 196618, 14, 0, 196621, 13, 0, 196622, 10, 0, 196623, 14, 0, 196625, 13, 0, 196626, 10, 0, 196627, 10, 0, 196628, 10, 0, 196629, 10, 0, 196630, 10, 0, 196631, 10, 0, 196632, 10, 0, 196633, 10, 0, 196634, 10, 0, 196635, 10, 0, 196636, 10, 0, 196637, 10, 0, 196638, 17, 0, 262174, 0, 0 )

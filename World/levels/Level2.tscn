@@ -1,0 +1,163 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://World/GroundTiteMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Elements/Checkpoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Elements/EndPortal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Elements/Hammer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Elements/LavaSpinner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Elements/JumpStream.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Elements/Lava.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=8]
+
+[node name="Map" type="Node2D"]
+
+[node name="EndPortal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4800, -608 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( -504, -96 )
+
+[node name="Dangers" type="Node2D" parent="."]
+
+[node name="Lava" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 80, -88 )
+
+[node name="Lava2" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 240, -80 )
+
+[node name="Lava3" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 432, -88 )
+
+[node name="Lava4" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 640, -80 )
+
+[node name="Lava5" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 744, -88 )
+
+[node name="Hammer" parent="Dangers" instance=ExtResource( 4 )]
+position = Vector2( 1968, -848 )
+
+[node name="Hammer2" parent="Dangers" instance=ExtResource( 4 )]
+position = Vector2( 2224, -848 )
+
+[node name="LavaSpinner" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 3800, -560 )
+
+[node name="LavaSpinner2" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 3992, -552 )
+
+[node name="LavaSpinner3" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 4192, -552 )
+
+[node name="LavaSpinner4" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 4408, -544 )
+
+[node name="Checkpoints" type="Node2D" parent="."]
+position = Vector2( 8, 0 )
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 2 )]
+position = Vector2( -192, -112 )
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 2 )]
+position = Vector2( 920, -104 )
+
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 2 )]
+position = Vector2( 2576, -616 )
+
+[node name="Jumpers" type="Node2D" parent="."]
+
+[node name="Jumper" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 2936, -272 )
+
+[node name="Jumper2" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3000, -272 )
+
+[node name="Jumper3" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3064, -272 )
+
+[node name="Jumper4" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3128, -272 )
+
+[node name="Jumper5" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3192, -272 )
+
+[node name="Jumper6" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3256, -272 )
+
+[node name="Jumper7" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3320, -272 )
+
+[node name="Jumper8" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3384, -272 )
+
+[node name="Jumper9" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3384, -304 )
+
+[node name="Jumper10" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3320, -304 )
+
+[node name="Jumper11" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3256, -304 )
+
+[node name="Jumper12" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3192, -304 )
+
+[node name="Jumper13" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3128, -304 )
+
+[node name="Jumper14" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3064, -304 )
+
+[node name="Jumper15" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3000, -304 )
+
+[node name="Jumper16" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 2936, -304 )
+
+[node name="Jumper17" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 2936, -336 )
+
+[node name="Jumper18" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3000, -336 )
+
+[node name="Jumper19" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3064, -336 )
+
+[node name="Jumper20" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3128, -336 )
+
+[node name="Jumper21" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3192, -336 )
+
+[node name="Jumper22" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3256, -336 )
+
+[node name="Jumper23" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3320, -336 )
+
+[node name="Jumper24" parent="Jumpers" instance=ExtResource( 6 )]
+position = Vector2( 3384, -336 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -917473, 1, 0, -917469, 1, 0, -589794, 13, 0, -589793, 10, 0, -589792, 10, 0, -589791, 10, 0, -589790, 10, 0, -589789, 10, 0, -589788, 10, 0, -589787, 10, 0, -589786, 10, 0, -589785, 10, 0, -589784, 10, 0, -589783, 14, 0, -589767, 13, 0, -589766, 10, 0, -589765, 10, 0, -589764, 10, 0, -589763, 10, 0, -589762, 10, 0, -589761, 10, 0, -589760, 10, 0, -589759, 10, 0, -589758, 10, 0, -589757, 10, 0, -589756, 10, 0, -589755, 10, 0, -589754, 10, 0, -589753, 10, 0, -589752, 10, 0, -589751, 10, 0, -589750, 10, 0, -589749, 10, 0, -589748, 14, 0, -458726, 13, 0, -458725, 14, 0, -327658, 13, 0, -327657, 536870925, 0, -262099, 13, 0, -262098, 10, 0, -262097, 10, 0, -262096, 10, 0, -262095, 10, 0, -262094, 10, 0, -262093, 10, 0, -262092, 10, 0, -262091, 14, 0, -196590, 13, 0, -196589, 536870925, 0, -9, 13, 0, -8, 10, 0, -7, 10, 0, -6, 10, 0, -5, 10, 0, -4, 10, 0, -3, 10, 0, -2, 10, 0, -1, 10, 0, -65536, 10, 0, -65535, 10, 0, -65534, 10, 0, -65533, 10, 0, -65532, 10, 0, -65531, 10, 0, -65530, 10, 0, -65529, 10, 0, -65528, 10, 0, -65527, 10, 0, -65526, 10, 0, -65525, 10, 0, -65524, 10, 0, -65523, 10, 0, -65522, 10, 0, -65521, 14, 0 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 56.0
+margin_top = -168.0
+margin_right = 205.0
+margin_bottom = -154.0
+text = "Be carefull, lava is hot !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -584.0
+margin_top = -232.0
+margin_right = -435.0
+margin_bottom = -169.0
+custom_fonts/font = ExtResource( 8 )
+text = "Level 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}

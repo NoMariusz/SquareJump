@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Windows/LevelsMenu.gd" type="Script" id=2]
+
+[node name="LevelsMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2056.0
+margin_top = -976.0
+margin_right = 2568.0
+margin_bottom = 1648.0
+color = Color( 0, 0.521569, 0.462745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1008.0
+margin_bottom = 600.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMenu" type="Button" parent="VBoxContainer"]
+margin_right = 1008.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 1 )
+text = "Return to main menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 99.0
+margin_right = 1008.0
+margin_bottom = 99.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/CenterContainer"]
+margin_left = 504.0
+margin_right = 504.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 496, 296 )
+current = true
+[connection signal="button_up" from="VBoxContainer/ButtonMenu" to="." method="_on_ButtonMenu_button_up"]

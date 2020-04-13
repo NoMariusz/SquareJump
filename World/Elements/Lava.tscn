@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/world/lavaAnim/lava2.png" type="Texture" id=1]
+[ext_resource path="res://assets/world/lavaAnim/lava5.png" type="Texture" id=2]
+[ext_resource path="res://assets/world/lavaAnim/lava1.png" type="Texture" id=3]
+[ext_resource path="res://assets/world/lavaAnim/lava3.png" type="Texture" id=4]
+[ext_resource path="res://assets/world/lavaAnim/lava4.png" type="Texture" id=5]
+[ext_resource path="res://assets/world/lava.png" type="Texture" id=6]
+[ext_resource path="res://World/Elements/LavaParticles.tres" type="Material" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 24 )
+
+[node name="Lava" type="Area2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 24 )
+scale = Vector2( 0.1875, 0.1875 )
+frames = SubResource( 1 )
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 24, 24 )
+shape = SubResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 24, 24 )
+randomness = 1.0
+draw_order = 1
+process_material = ExtResource( 7 )

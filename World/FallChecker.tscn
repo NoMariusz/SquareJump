@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4521.47, 10 )
+
+[node name="FallChecker" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -4548.0
+margin_top = -9.0
+margin_right = 4557.0
+margin_bottom = 235.0
+color = Color( 0.913725, 0.976471, 0.156863, 0.0784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

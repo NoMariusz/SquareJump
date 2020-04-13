@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/Elements/Lava.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Elements/LavaSpinner.gd" type="Script" id=2]
+
+[node name="LavaSpinner" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -8.0
+margin_bottom = 120.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lava" parent="." instance=ExtResource( 1 )]
+position = Vector2( -32, 120 )
+scale = Vector2( 1.17, 1.17 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.03
+[connection signal="body_entered" from="Lava" to="." method="_on_Lava_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

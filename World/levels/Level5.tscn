@@ -1,0 +1,235 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://World/Elements/JumpStream.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Elements/Rock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GroundTiteMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Elements/EndPortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Elements/LavaBall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Elements/Checkpoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Elements/LavaSpinner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Elements/Hammer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=9]
+[ext_resource path="res://World/Elements/Lava.tscn" type="PackedScene" id=10]
+
+[node name="Map" type="Node2D"]
+
+[node name="Dangers" type="Node2D" parent="."]
+
+[node name="Hammer" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( -896, -104 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Hammer2" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( -576, -88 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Hammer3" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( 0, -88 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Hammer5" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( 192, -88 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Lava5" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1216, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava6" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1352, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava7" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1496, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava8" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1640, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava9" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1784, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava10" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1928, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava11" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -2072, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava12" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -2216, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava13" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -2360, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava14" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -2504, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Lava15" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -2640, -2144 )
+scale = Vector2( 3, 3 )
+
+[node name="Hammer4" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( -328, -136 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Hammer6" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( -2384, -2072 )
+
+[node name="Hammer7" parent="Dangers" instance=ExtResource( 8 )]
+position = Vector2( -1936, -2064 )
+
+[node name="Lava" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1552, 472 )
+
+[node name="Lava2" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1504, 472 )
+
+[node name="Lava3" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1456, 472 )
+
+[node name="Lava4" parent="Dangers" instance=ExtResource( 10 )]
+position = Vector2( -1408, 472 )
+
+[node name="LavaSpinner" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -862.4, -288 )
+
+[node name="LavaSpinner6" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -2624, -1776 )
+
+[node name="LavaSpinner7" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -2112, -1768 )
+
+[node name="LavaSpinner8" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -1656, -1760 )
+
+[node name="LavaSpinner2" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -542.4, -288 )
+
+[node name="LavaSpinner3" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( -289.6, -296 )
+
+[node name="LavaSpinner4" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 24, -296 )
+
+[node name="LavaSpinner5" parent="Dangers" instance=ExtResource( 7 )]
+position = Vector2( 216, -296 )
+
+[node name="LavaBall" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 0, -384 )
+
+[node name="LavaBall2" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( -1424, -1024 )
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 6 )]
+position = Vector2( -984, 16 )
+
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 6 )]
+position = Vector2( 440, -552 )
+
+[node name="Checkpoint4" parent="Checkpoints" instance=ExtResource( 6 )]
+position = Vector2( -1040, -1008 )
+
+[node name="Checkpoint5" parent="Checkpoints" instance=ExtResource( 6 )]
+position = Vector2( -2920, -1840 )
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 6 )]
+position = Vector2( -2288, -176 )
+
+[node name="Streams" type="Node2D" parent="."]
+
+[node name="Jumper" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( -1296, 504 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper2" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( 736, 424 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper3" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( -1168, 504 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper4" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( 864, 424 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper5" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( 672, 488 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper6" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( 800, 488 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper7" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( 928, 488 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper8" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( -3224, -856 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper9" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( -3096, -856 )
+scale = Vector2( 2, 2 )
+
+[node name="Jumper10" parent="Streams" instance=ExtResource( 1 )]
+position = Vector2( -736, -1792 )
+
+[node name="Rocks" type="Node2D" parent="."]
+
+[node name="Rock" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -744, 24 )
+
+[node name="Rock2" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( 112, -360 )
+
+[node name="Rock5" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -1320, -1008 )
+
+[node name="Rock6" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -1128, -1008 )
+
+[node name="Rock8" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -2624, -1000 )
+
+[node name="Rock9" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -2400, -984 )
+
+[node name="Rock7" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( -1232, -1000 )
+
+[node name="Rock3" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( 800, -680 )
+
+[node name="Rock4" parent="Rocks" instance=ExtResource( 2 )]
+position = Vector2( 616, 80 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( -2320, -176 )
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -2097193, -536870912, 0, -2097192, -1610612730, 0, -2097191, -1610612730, 0, -2097190, -1610612730, 0, -2097189, -1610612730, 0, -2097188, -1610612730, 0, -2097187, -1610612730, 0, -2097186, -1610612730, 0, -2097185, -1610612730, 0, -2097184, -1610612730, 0, -2097183, -1610612730, 0, -2097182, -1610612730, 0, -2097181, -1610612730, 0, -2097180, -1610612730, 0, -2097179, -1610612730, 0, -2097178, -1610612730, 0, -2097177, -1610612730, 0, -2097176, -1610612730, 0, -2097175, -1610612730, 0, -2097174, -1610612730, 0, -2097173, -1610612730, 0, -2097172, -1610612730, 0, -2097171, -1610612730, 0, -2097170, -2147483648, 0, -2031625, 536870917, 0, -2031620, 536870917, 0, -1966089, 536870918, 0, -1966084, 536870918, 0, -1900560, 536870913, 0, -1900553, 536870921, 0, -1900552, -536870906, 0, -1900551, -536870906, 0, -1900550, -536870906, 0, -1900549, -536870906, 0, -1900548, 536870919, 0, -1835061, 5, 0, -1835031, 1, 0, -1835028, 1, 0, -1769525, 6, 0, -1769519, 13, 0, -1769518, 10, 0, -1769517, 14, 0, -1769514, 13, 0, -1769513, 14, 0, -1769510, 13, 0, -1769509, 10, 0, -1769508, 14, 0, -1769506, 13, 0, -1769505, 14, 0, -1769503, 13, 0, -1769502, 10, 0, -1769501, 14, 0, -1769499, 13, 0, -1769498, 14, 0, -1769484, 536870913, 0, -1703989, 6, 0, -1638453, 6, 0, -1638450, 1, 0, -1572917, 6, 0, -1572903, 536870913, 0, -1572899, 536870913, 0, -1572896, 536870913, 0, -1572892, 536870913, 0, -1572889, 536870913, 0, -1507381, 536870918, 0, -1441845, 536870918, 0, -1441842, 1, 0, -1376309, 536870918, 0, -1310773, 536870918, 0, -1245237, 536870918, 0, -1245234, 1, 0, -1179701, 536870918, 0, -1114165, 536870918, 0, -1048629, 536870918, 0, -983093, 536870918, 0, -983087, 536870926, 0, -983086, 536870925, 0, -917557, 536870912, 0, -917546, 536870926, 0, -917545, 536870925, 0, -917543, 536870913, 0, -917541, 536870913, 0, -917539, 536870913, 0, -917537, 536870913, 0, -917535, 536870913, 0, -917533, 536870913, 0, -917531, 536870913, 0, -917529, 536870926, 0, -917528, 536870922, 0, -917527, 536870922, 0, -917526, 536870922, 0, -917525, 536870922, 0, -917524, 536870922, 0, -917523, 536870922, 0, -917522, 536870922, 0, -917521, 536870922, 0, -917520, 536870925, 0, -851982, 536870913, 0, -917489, 536870917, 0, -786484, -1073741819, 0, -786483, -536870906, 0, -786482, -536870906, 0, -786481, -536870906, 0, -786480, -536870907, 0, -786443, 536870913, 0, -851953, 536870918, 0, -786417, 536870918, 0, -655369, 536870913, 0, -720881, 536870918, 0, -655348, 536870913, 0, -655345, 536870918, 0, -524304, 536870913, 0, -524300, 536870913, 0, -589809, 536870918, 0, -458771, 536870913, 0, -524282, 536870926, 0, -524281, 536870925, 0, -524273, 536870918, 0, -458739, 536870913, 0, -458737, 536870918, 0, -327698, 536870913, 0, -393201, 536870918, 0, -262158, -1610612729, 0, -262157, -1610612730, 0, -262156, -1610612730, 0, -262155, -1610612730, 0, -262154, -1610612730, 0, -262153, -1610612730, 0, -262152, -1610612730, 0, -262151, -1610612730, 0, -262150, -1610612730, 0, -262149, -1610612730, 0, -262148, -1610612730, 0, -262147, -1610612730, 0, -262146, -1610612730, 0, -262145, -1610612730, 0, -327680, -1610612730, 0, -327679, -1610612730, 0, -327678, -1610612730, 0, -327677, -2147483641, 0, -327665, 536870918, 0, -196622, 6, 0, -262141, 1073741830, 0, -262132, 536870913, 0, -262129, 536870918, 0, -131086, 6, 0, -131077, 1, 0, -196605, 1073741830, 0, -196593, 536870918, 0, -65573, 13, 0, -65572, 14, 0, -65550, 0, 0, -65545, 1, 0, -131072, 1, 0, -131069, 0, 0, -131057, 536870918, 0, -34, 1, 0, -65521, 536870918, 0, 14, 536870913, 0, 15, 536870912, 0, 131040, 1, 0, 131055, 13, 0, 131056, 10, 0, 131057, 10, 0, 131058, 10, 0, 131059, 10, 0, 131060, 10, 0, 131061, 10, 0, 131062, 10, 0, 131063, 10, 0, 131064, 10, 0, 131065, 10, 0, 131066, 10, 0, 131067, 10, 0, 131068, 10, 0, 131069, 10, 0, 131070, 10, 0, 131071, 10, 0, 65536, 10, 0, 65537, 10, 0, 65538, 10, 0, 65539, 10, 0, 65540, 10, 0, 65541, 10, 0, 65542, 10, 0, 65543, 14, 0, 131078, 536870926, 0, 131079, 536870922, 0, 131080, 536870922, 0, 131081, 536870922, 0, 131082, 536870925, 0, 196624, 536870913, 0, 327651, 1, 0, 458725, 536870916, 0, 458726, 536870915, 0, 458727, 4, 0, 524261, -536870904, 0, 524262, 536870928, 0, 524263, -2147483640, 0, 458760, 536870913, 0, 458768, 536870913, 0, 589797, 7, 0, 589798, 8, 0, 589799, 8, 0, 589800, 10, 0, 589801, 10, 0, 589802, 10, 0, 589803, 10, 0, 589804, 10, 0, 589805, 10, 0, 589806, 14, 0, 524297, 536870926, 0, 524298, 536870922, 0, 524299, 536870922, 0, 524300, 536870922, 0, 524301, 536870922, 0, 524302, 536870922, 0, 524303, 536870925, 0 )
+
+[node name="EndPortal" parent="." instance=ExtResource( 4 )]
+position = Vector2( -376, -1952 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -2360.0
+margin_top = -312.0
+margin_right = -2209.0
+margin_bottom = -249.0
+custom_fonts/font = ExtResource( 9 )
+text = "Level 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}

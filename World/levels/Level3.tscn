@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://World/Elements/Checkpoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Elements/Hammer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GroundTiteMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Elements/EndPortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Elements/Lava.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Elements/LavaSpinner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Elements/JumpStream.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=8]
+
+[node name="Map" type="Node2D"]
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( -632, -88 )
+
+[node name="Dangers" type="Node2D" parent="."]
+
+[node name="Lava" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 152, 416 )
+
+[node name="Lava2" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 200, 416 )
+
+[node name="Lava3" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 248, 416 )
+
+[node name="Lava4" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 288, 416 )
+
+[node name="Lava5" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 320, 416 )
+
+[node name="Lava6" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 104, 416 )
+
+[node name="Lava7" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 464, 424 )
+
+[node name="Lava8" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 504, 424 )
+
+[node name="Lava9" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 552, 424 )
+
+[node name="Lava10" parent="Dangers" instance=ExtResource( 5 )]
+position = Vector2( 592, 424 )
+
+[node name="Hammer" parent="Dangers" instance=ExtResource( 2 )]
+position = Vector2( 264, 488 )
+
+[node name="Hammer2" parent="Dangers" instance=ExtResource( 2 )]
+position = Vector2( 472, 488 )
+
+[node name="LavaSpinner" parent="Dangers" instance=ExtResource( 6 )]
+position = Vector2( -280, -40 )
+
+[node name="LavaSpinner2" parent="Dangers" instance=ExtResource( 6 )]
+position = Vector2( 672, -408 )
+
+[node name="LavaSpinner3" parent="Dangers" instance=ExtResource( 6 )]
+position = Vector2( 672, -648 )
+
+[node name="LavaSpinner4" parent="Dangers" instance=ExtResource( 6 )]
+position = Vector2( 1184, -400 )
+
+[node name="LavaSpinner5" parent="Dangers" instance=ExtResource( 6 )]
+position = Vector2( 1440, -400 )
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 1 )]
+position = Vector2( 96, -112 )
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 1 )]
+position = Vector2( 672, 728 )
+
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 1 )]
+position = Vector2( 1312, -240 )
+
+[node name="Streams" type="Node2D" parent="."]
+
+[node name="Jumper" parent="Streams" instance=ExtResource( 7 )]
+position = Vector2( 1120, 752 )
+
+[node name="Jumper2" parent="Streams" instance=ExtResource( 7 )]
+position = Vector2( 1056, 752 )
+
+[node name="Jumper3" parent="Streams" instance=ExtResource( 7 )]
+position = Vector2( 1120, 720 )
+
+[node name="Jumper4" parent="Streams" instance=ExtResource( 7 )]
+position = Vector2( 1056, 720 )
+
+[node name="EndPortal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 672, -720 )
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -720886, 536870917, 0, -655350, 536870918, 0, -655346, 536870913, 0, -589814, 536870918, 0, -589808, 536870917, 0, -524278, 536870918, 0, -524272, 536870912, 0, -458742, 536870918, 0, -458734, 536870913, 0, -458730, 536870913, 0, -458727, 536870913, 0, -393206, 536870918, 0, -327670, 536870918, 0, -327654, 536870913, 0, -262134, 536870918, 0, -196598, 536870918, 0, -196591, 536870926, 0, -196590, 536870922, 0, -196589, 536870922, 0, -196588, 536870922, 0, -196587, 536870922, 0, -196586, 536870922, 0, -196585, 536870922, 0, -196584, 536870922, 0, -196583, 536870922, 0, -196582, 536870925, 0, -131062, 536870918, 0, -11, 13, 0, -10, 10, 0, -9, 10, 0, -8, 10, 0, -7, 10, 0, -6, 10, 0, -5, 10, 0, -4, 10, 0, -3, 10, 0, -2, 10, 0, -1, 10, 0, -65536, 10, 0, -65535, 12, 0, -65534, 14, 0, -65526, 536870918, 0, -65521, 536870913, 0, 1, 6, 0, 10, 1610612742, 0, 65537, 6, 0, 65539, 536870913, 0, 65544, 536870913, 0, 65546, 1610612742, 0, 65549, 536870913, 0, 131073, 6, 0, 131082, 1610612742, 0, 196609, 6, 0, 196618, 1610612742, 0, 262145, 6, 0, 262154, 1610612742, 0, 262156, 536870913, 0, 327681, 6, 0, 327690, 1610612742, 0, 327694, 536870926, 0, 327695, 536870925, 0, 393217, 6, 0, 393226, 1610612742, 0, 458753, 7, 0, 458754, -1610612730, 0, 458755, -1610612730, 0, 458756, -1610612730, 0, 458757, -2147483648, 0, 458759, -536870912, 0, 458760, -1610612730, 0, 458761, -1610612730, 0, 458762, 9, 0, 655375, 536870913, 0, 655378, 536870913, 0, 786435, 13, 0, 786436, 536870922, 0, 786437, 536870922, 0, 786438, 536870922, 0, 786439, 536870922, 0, 786440, 536870922, 0, 786441, 10, 0, 786442, 10, 0, 786443, 10, 0, 786444, 10, 0, 786445, 10, 0, 786446, 10, 0, 786447, 10, 0, 786448, 10, 0, 786449, 10, 0, 786450, 14, 0 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -704.0
+margin_top = -248.0
+margin_right = -554.0
+margin_bottom = -185.0
+custom_fonts/font = ExtResource( 8 )
+text = "Level 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 464.0
+margin_top = 64.0
+margin_right = 614.0
+margin_bottom = 193.0
+rect_rotation = 180.0
+custom_fonts/font = ExtResource( 8 )
+text = "^
+|"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

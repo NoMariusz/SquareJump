@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Characters/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://World/LevelManager.gd" type="Script" id=3]
+[ext_resource path="res://World/FallChecker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/world/background.png" type="Texture" id=5]
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511.653, 299.764 )
+
+[node name="Camera" type="Camera2D" parent="Player"]
+position = Vector2( -1.11017, -0.841614 )
+z_index = 2
+current = true
+zoom = Vector2( 0.8, 0.8 )
+process_mode = 0
+smoothing_enabled = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player"]
+
+[node name="TextureRect" type="TextureRect" parent="Player/ParallaxBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="Player/ParallaxBackground"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -177.0
+margin_top = -121.0
+margin_right = 178.0
+custom_fonts/font = ExtResource( 2 )
+text = "Return to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FallChecker" parent="." instance=ExtResource( 4 )]
+position = Vector2( 280.207, 3283.81 )
+scale = Vector2( 2, 1 )
+[connection signal="button_up" from="Player/ParallaxBackground/ReturnButton" to="." method="_on_ReturnButton_button_up"]
+[connection signal="body_entered" from="FallChecker" to="." method="_on_FallChecker_body_entered"]

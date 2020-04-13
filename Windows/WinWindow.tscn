@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Windows/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Windows/WinWindow.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1320.0
+margin_top = -776.0
+margin_right = 1328.0
+margin_bottom = 768.0
+color = Color( 0, 0.521569, 0.462745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -216.0
+margin_top = -64.0
+margin_right = 207.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "Congratulations !!!
+You Won the game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -192.0
+margin_top = 168.0
+margin_right = 200.0
+margin_bottom = 296.0
+custom_fonts/font = ExtResource( 1 )
+text = "Return to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
