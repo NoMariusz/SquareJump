@@ -1,8 +1,0 @@
-Nowe poziomy muszą:
-	- być nodem2D o nazwie Map
-	- Mieć TileMap
-	- Mieć StartPosition Position2D node
-	- Mieć EndPortal
-	- noda2d o nazwie Dangers gdzie ładujemy niebezpieczeństwa
-	- noda2d o nazwie Checkpoints
-	- label z numerem poziomu z dużą czcionką

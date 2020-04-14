@@ -16,11 +16,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = -216.0
-margin_top = -64.0
-margin_right = 207.0
-margin_bottom = 65.0
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+use_top_left = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = -212.0
+margin_top = -101.0
+margin_right = 211.0
+margin_bottom = 101.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 423.0
+margin_bottom = 129.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer"]
+margin_right = 423.0
+margin_bottom = 129.0
 custom_fonts/font = ExtResource( 1 )
 text = "Congratulations !!!
 You Won the game"
@@ -30,17 +49,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = -192.0
-margin_top = 168.0
-margin_right = 200.0
-margin_bottom = 296.0
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 133.0
+margin_right = 423.0
+margin_bottom = 202.0
 custom_fonts/font = ExtResource( 1 )
 text = "Return to Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]

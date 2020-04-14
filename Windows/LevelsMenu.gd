@@ -32,7 +32,7 @@ func make_btns():
 		btn.set_size(Vector2(300, 600))
 		btn.editor_description = name
 		btn.connect("my_click", self, "btn_down")
-		$VBoxContainer/CenterContainer/GridContainer.add_child(btn)
+		$MCenterContainer/VBoxContainer/CenterContainer/GridContainer.add_child(btn)
 
 func btn_down(btn):
 	change_actual_lvl(btn.editor_description)
